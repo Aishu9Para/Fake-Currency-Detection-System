@@ -63,3 +63,105 @@ Fake-Currency-Detection-System/
 ├── gui_2.ipynb # GUI module for displaying detailed results
 ├── FAKE_CURRENCY_DETECTOR_REPORT.pdf # Complete project report
 └── README.md # You are here!
+```
+
+---
+
+## ⚙️ How to Run
+
+### **Step 1: Setup and Initialization**
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/Fake-Currency-Detection-System.git](https://github.com/your-username/Fake-Currency-Detection-System.git)
+    cd Fake-Currency-Detection-System
+    ```
+2.  **Open the project in Jupyter Notebook:**
+    ```bash
+    jupyter notebook
+    ```
+3.  **Run the main notebook:**
+    * Open `controller.ipynb`
+    * Click **Run All cells**.
+
+---
+
+### **Step 2: Use the GUI**
+
+1.  A GUI window (`gui_1.ipynb`) will launch.
+2.  Click **Select an Image** and choose a note image (sample images are in the `Dataset/` folder).
+3.  Select the correct **denomination** (₹500 or ₹2000).
+4.  Click **Submit**.
+
+### **Step 3: View the Result**
+
+1.  The system processes the image (~5 seconds).
+2.  A new GUI window (`gui_2.ipynb`) displays the detailed authenticity report, scores, and final label.
+
+---
+
+## 📊 Results and Analysis
+
+| Category | Notes Tested | Correctly Classified | Accuracy |
+|---|---|---|---|
+| Real Notes (₹500 & ₹2000) | 19 | 15 | 79% |
+| Fake Notes | 12 | 10 | 83% |
+
+⏱️ **Average Processing Time:** ~5 seconds per note
+
+🧾 **Decision Rule:** If $\geq 9$ out of 10 security features pass the SSIM/count checks, the Note is classified as Genuine.
+
+---
+
+## 🔒 Trustworthy AI Principles
+
+| Principle | Implementation in Project |
+|---|---|
+| **Transparency** | The system displays SSIM scores for each feature, showing the precise metrics used for the decision. |
+| **Explainability** | Uses interpretable, rule-based computer vision metrics (SSIM, contour counts) instead of opaque black-box ML models. |
+| **Reliability** | Built with deterministic algorithms and tested against a verified, custom dataset. |
+| **Accessibility** | Designed with a user-friendly GUI for non-technical operators. |
+| **Fairness** | Avoids human/data bias through consistent, objective, rule-based image analysis. |
+
+---
+
+## 🖼️ Demo (Screenshots)
+
+To give a visual overview of the user experience:
+
+1.  **Image Upload and Input Window**
+    The initial screen where the user selects the image file and specifies the denomination.
+2.  **Processing Screen**
+    A simple window indicating that the computer vision algorithms are running.
+3.  **Final Results Screen**
+    The comprehensive report showing the input image, feature-wise breakdown, SSIM scores, and the final verdict.
+
+---
+
+## 🧭 Future Enhancements
+
+* **🏦 Expand Denominations:** Extend support to include other notes (₹10, ₹20, ₹50, ₹100, ₹200).
+* **🤖 Integrate Machine Learning:** Implement deep learning (e.g., CNNs) for automatic feature localization and recognition to improve robustness.
+* **📱 Deployment:** Develop mobile and web-based versions for broader public and institutional use.
+* **☁️ Cloud Validation:** Introduce cloud-based template verification for real-time validation and scalability.
+
+---
+
+## 👥 Contributors
+
+| Name | Role |
+|---|---|
+|  | Image Processing & GUI Design |
+|  | Core Algorithm Development |
+|  | Dataset Preparation & Testing |
+|  | Documentation & Integration |
+
+
+
+
+
+---
+
+## 🏁 Conclusion
+
+The Fake Currency Detection System successfully demonstrates the application of Trustworthy Artificial Intelligence principles—namely **accuracy, interpretability, and accessibility**—to solve a real-world financial security problem. By robustly combining computer vision with ethical AI practices, this project delivers a scalable, transparent, and user-centric solution for counterfeit detection.
